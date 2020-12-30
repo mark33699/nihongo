@@ -14,6 +14,8 @@ struct NipponWord {
 
 struct ContentView: View {
     
+    @State var index = 0
+    
     let fifty = [
         NipponWord(jp: "あ", en: "a"),
         NipponWord(jp: "い", en: "i"),
@@ -23,8 +25,24 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        Text(fifty.first!.jp)
-            .font(.system(size: 100))
+        VStack{
+            Text(fifty[index].jp)
+                .font(.system(size: 100))
+                .background(Color.red)
+                .padding()
+            
+            Button(action: {
+                index += 1
+                
+            }, label: {
+                Text("+")
+                    .font(.system(size: 100))
+            })
+            .frame(width: 100, height: 100, alignment: .center)
+            .background(Color.white)
+            .clipShape(Circle())
+            
+        }
     }
 }
 
