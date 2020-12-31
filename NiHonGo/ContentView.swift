@@ -16,6 +16,7 @@ struct ContentView: View {
     
     @State var index = 0
     @State var input = ""
+    @State var presentingModal = false
     
     let fifty = [
         NipponWord(jp: "あ", en: "a"),
@@ -26,6 +27,7 @@ struct ContentView: View {
     ]
     
     var body: some View {
+        
         VStack{
             Text(fifty[index].jp)
                 .frame(height: 100)
@@ -49,6 +51,14 @@ struct ContentView: View {
                 .frame(height: 100)
                 .foregroundColor(.green)
                 .background(Color.white)
+            
+            Spacer().frame(height: 50)
+            
+            Button("JUMP!") {
+                presentingModal = true
+            }.sheet(isPresented: $presentingModal, content: {
+                ListView()
+            })
             
         }.frame(width: 100, alignment: .center)
     }
