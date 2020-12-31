@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct ListView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text("Good Bye, TableView 😭")
+        
+        let backBtn = Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }, label: {
+            Image(systemName: "arrow.left")
+        })
+        
+        NavigationView {
+            Text("Good Bye, TableView 😭")
+                .navigationBarTitle("ㄤㄤ", displayMode: .large)
+                .navigationBarItems(leading: backBtn)
+        }
     }
 }
 
