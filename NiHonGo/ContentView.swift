@@ -15,6 +15,7 @@ struct NipponWord {
 struct ContentView: View {
     
     @State var index = 0
+    @State var input = ""
     
     let fifty = [
         NipponWord(jp: "あ", en: "a"),
@@ -27,10 +28,11 @@ struct ContentView: View {
     var body: some View {
         VStack{
             Text(fifty[index].jp)
-                .frame(width: 100, height: 100, alignment: .center)
+                .frame(height: 100)
                 .font(.system(size: 100))
                 .background(Color.red)
-                .padding()
+            
+            Spacer().frame(height: 100)
             
             Button(action: {
                 index += 1
@@ -38,10 +40,17 @@ struct ContentView: View {
                 Image(systemName: "plus.circle.fill")
                     .resizable()
             })
-            .frame(width: 100, height: 100, alignment: .center)
+            .frame(width: 100, height: 100)
             .clipShape(Circle())
             
-        }
+            Spacer().frame(height: 100)
+            
+            TextField("", text: $input)
+                .frame(height: 100)
+                .foregroundColor(.green)
+                .background(Color.white)
+            
+        }.frame(width: 100, alignment: .center)
     }
 }
 
