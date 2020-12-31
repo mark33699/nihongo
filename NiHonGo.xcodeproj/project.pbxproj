@@ -56,10 +56,10 @@
 			children = (
 				4D674A83259B314A0063C1F0 /* NiHonGoApp.swift */,
 				4D674A85259B314A0063C1F0 /* ContentView.swift */,
+				4D7D4337259DA775008A2FF3 /* ListView.swift */,
 				4D674A87259B314C0063C1F0 /* Assets.xcassets */,
 				4D674A8C259B314C0063C1F0 /* Info.plist */,
 				4D674A89259B314C0063C1F0 /* Preview Content */,
-				4D7D4337259DA775008A2FF3 /* ListView.swift */,
 			);
 			path = NiHonGo;
 			sourceTree = "<group>";

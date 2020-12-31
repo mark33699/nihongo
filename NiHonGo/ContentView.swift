@@ -17,6 +17,7 @@ struct ContentView: View {
     @State var index = 0
     @State var input = ""
     @State var presentingModal = false
+    @State var presentingFullScreen = false //不拆兩個變數的話, 會變成都是modal
     
     let fifty = [
         NipponWord(jp: "あ", en: "a"),
@@ -28,12 +29,24 @@ struct ContentView: View {
     
     var body: some View {
         
+        let modalBtn = Button("modal") {
+            presentingModal = true
+        }.sheet(isPresented: $presentingModal, content: {
+            ListView()
+        })
+        
+        let fullScreenBtn = Button("fullScreen") {
+            presentingFullScreen = true
+        }.fullScreenCover(isPresented: $presentingFullScreen, content: {
+            ListView()
+        })
+        
         VStack{
             Text(fifty[index].jp)
                 .frame(height: 100)
                 .font(.system(size: 100))
                 .background(Color.red)
-            
+
             Spacer().frame(height: 100)
             
             Button(action: {
@@ -48,19 +61,19 @@ struct ContentView: View {
             Spacer().frame(height: 100)
             
             TextField("", text: $input)
-                .frame(height: 100)
+                .frame(width: 100, height: 100)
                 .foregroundColor(.green)
                 .background(Color.white)
             
-            Spacer().frame(height: 50)
-            
-            Button("JUMP!") {
-                presentingModal = true
-            }.sheet(isPresented: $presentingModal, content: {
-                ListView()
-            })
-            
-        }.frame(width: 100, alignment: .center)
+            HStack {
+                modalBtn
+                
+                Spacer().frame(width: 100)
+                
+                fullScreenBtn
+                
+            }.padding(50)
+        }
     }
 }
 
