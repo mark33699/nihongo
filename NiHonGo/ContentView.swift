@@ -27,19 +27,18 @@ struct ContentView: View {
     var body: some View {
         VStack{
             Text(fifty[index].jp)
+                .frame(width: 100, height: 100, alignment: .center)
                 .font(.system(size: 100))
                 .background(Color.red)
                 .padding()
             
             Button(action: {
                 index += 1
-                
             }, label: {
-                Text("+")
-                    .font(.system(size: 100))
+                Image(systemName: "plus.circle.fill")
+                    .resizable()
             })
             .frame(width: 100, height: 100, alignment: .center)
-            .background(Color.white)
             .clipShape(Circle())
             
         }
@@ -49,5 +48,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
