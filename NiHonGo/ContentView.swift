@@ -66,8 +66,10 @@ struct ContentView: View {
             
             TextField("", text: $input)
                 .frame(width: 100, height: 100)
-                .foregroundColor(.green)
-                .background(Color.white)
+                .font(.system(size: 100))
+                .foregroundColor(.init(UIColor.brown))
+                .background(Color.green)
+                .cornerRadius(45)
             
             HStack {
                 modalBtn
