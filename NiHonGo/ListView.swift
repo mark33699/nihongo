@@ -23,6 +23,8 @@ struct ListView: View {
             Text("Good Bye, TableView 😭")
                 .navigationBarTitle("ㄤㄤ", displayMode: .large)
                 .navigationBarItems(leading: backBtn)
+        }.onAppear{
+            UINavigationBar.appearance().backgroundColor = .systemGreen
         }
     }
 }

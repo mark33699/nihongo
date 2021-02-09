@@ -27,6 +27,10 @@ struct ContentView: View {
         NipponWord(jp: "お", en: "o")
     ]
     
+    init() {
+        UINavigationBar.appearance().backgroundColor = .systemPink
+    }
+    
     var body: some View {
         
         let modalBtn = Button("modal") {
