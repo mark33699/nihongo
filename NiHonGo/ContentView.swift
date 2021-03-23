@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct NipponWord {
-    let jp: String
-    let en: String
-}
-
 struct ContentView: View {
     
     @State var index = 0
@@ -29,6 +24,14 @@ struct ContentView: View {
     
     init() {
         UINavigationBar.appearance().backgroundColor = .systemPink
+        
+        for (index, word) in NihonWord.allCases.enumerated() {
+            let idx = index+1
+            print("\(idx).\(word.rawValue) = \(word.hiragana)_\(word.column)_\(word.row)")
+            if idx % 5 == 0 {
+                print("==================")
+            }
+        }
     }
     
     var body: some View {
