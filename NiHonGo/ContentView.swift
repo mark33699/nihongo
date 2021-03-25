@@ -14,14 +14,6 @@ struct ContentView: View {
     @State var presentingModal = false
     @State var presentingFullScreen = false //不拆兩個變數的話, 會變成都是modal
     
-    let fifty = [
-        NipponWord(jp: "あ", en: "a"),
-        NipponWord(jp: "い", en: "i"),
-        NipponWord(jp: "う", en: "u"),
-        NipponWord(jp: "え", en: "e"),
-        NipponWord(jp: "お", en: "o")
-    ]
-    
     init() {
         UINavigationBar.appearance().backgroundColor = .systemPink
         
@@ -42,14 +34,8 @@ struct ContentView: View {
             ListView()
         })
         
-        let fullScreenBtn = Button("fullScreen") {
-            presentingFullScreen = true
-        }.fullScreenCover(isPresented: $presentingFullScreen, content: {
-            ListView()
-        })
-        
         VStack{
-            Text(fifty[index].jp)
+            Text(NihonWord.allCases[index].hiragana.rawValue)
                 .frame(height: 100)
                 .font(.system(size: 100))
                 .background(Color.red)
@@ -57,7 +43,9 @@ struct ContentView: View {
             Spacer().frame(height: 100)
             
             Button(action: {
-                index += 1
+                if index < NihonWord.allCases.count - 1 {
+                    index += 1
+                }
             }, label: {
                 Image(systemName: "plus.circle.fill")
                     .resizable()
@@ -66,22 +54,6 @@ struct ContentView: View {
             .clipShape(Circle())
             
             Spacer().frame(height: 100)
-            
-            TextField("", text: $input)
-                .frame(width: 100, height: 100)
-                .font(.system(size: 100))
-                .foregroundColor(.init(UIColor.brown))
-                .background(Color.green)
-                .cornerRadius(45)
-            
-            HStack {
-                modalBtn
-                
-                Spacer().frame(width: 100)
-                
-                fullScreenBtn
-                
-            }.padding(50)
         }
     }
 }

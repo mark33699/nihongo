@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct NipponWord {
-    let jp: String
-    let en: String
-}
-
 enum NihonWord: String, CaseIterable {
     case  a,  i,  u,  e,  o
     case ka, ki, ku, ke, ko
