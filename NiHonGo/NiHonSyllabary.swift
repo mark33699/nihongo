@@ -8,6 +8,7 @@
 import Foundation
 
 enum NiHonSyllabary: String, CaseIterable {
+    //清音
     case  a,  i,  u,  e,  o
     case ka, ki, ku, ke, ko
     case sa, si, su, se, so
@@ -21,6 +22,13 @@ enum NiHonSyllabary: String, CaseIterable {
     case ya, yu, yo
     case wa, wo
     case n
+    
+    //濁音/半濁音
+    case ga, gi, gu, ge, go
+    case za, zi, zu, ze, zo
+    case da, di, du, de, `do`
+    case ba, bi, bu, be, bo
+    case pa, pi, pu, pe, po
     
     var hiragana: Hiragana {
         switch self {
@@ -80,6 +88,36 @@ enum NiHonSyllabary: String, CaseIterable {
         case .wo: return .を
         
         case .n: return .ん
+        
+        case .ga: return .が
+        case .gi: return .ぎ
+        case .gu: return .ぐ
+        case .ge: return .げ
+        case .go: return .ご
+
+        case .za: return .ざ
+        case .zi: return .じ
+        case .zu: return .ず
+        case .ze: return .ぜ
+        case .zo: return .ぞ
+
+        case .da: return .だ
+        case .di: return .ぢ
+        case .du: return .づ
+        case .de: return .で
+        case .do: return .ど
+
+        case .ba: return .ば
+        case .bi: return .び
+        case .bu: return .ぶ
+        case .be: return .べ
+        case .bo: return .ぼ
+
+        case .pa: return .ぱ
+        case .pi: return .ぴ
+        case .pu: return .ぷ
+        case .pe: return .ぺ
+        case .po: return .ぽ
         }
     }
     
@@ -106,7 +144,13 @@ enum NiHonSyllabary: String, CaseIterable {
         case "y": return .や行
         case "r": return .ら行
         case "w": return .わ行
+        case "g": return .が行
+        case "z": return .ざ行
+        case "d": return .だ行
+        case "b": return .ば行
+        case "p": return .ぱ行
         default: return .無行
+            
         }
     }
     
@@ -131,6 +175,12 @@ enum NiHonSyllabary: String, CaseIterable {
         case ら行
         case わ行
         case 無行
+        
+        case が行
+        case ざ行
+        case だ行
+        case ば行
+        case ぱ行
     }
     
     enum Hiragana: String {
@@ -189,5 +239,35 @@ enum NiHonSyllabary: String, CaseIterable {
         case を
         
         case ん
+        
+        case が
+        case ぎ
+        case ぐ
+        case げ
+        case ご
+
+        case ざ
+        case じ
+        case ず
+        case ぜ
+        case ぞ
+
+        case だ
+        case ぢ
+        case づ
+        case で
+        case ど
+
+        case ば
+        case び
+        case ぶ
+        case べ
+        case ぼ
+
+        case ぱ
+        case ぴ
+        case ぷ
+        case ぺ
+        case ぽ
     }
 }
