@@ -1,5 +1,5 @@
 //
-//  NipponWord.swift
+//  NiHonSyllabary.swift
 //  NiHonGo
 //
 //  Created by MarkHsieH on 2021/3/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NihonWord: String, CaseIterable {
+enum NiHonSyllabary: String, CaseIterable {
     case  a,  i,  u,  e,  o
     case ka, ki, ku, ke, ko
     case sa, si, su, se, so

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D5B4AE42608A3E8009306E8 /* NihonWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4AE32608A3E8009306E8 /* NihonWord.swift */; };
+		4D5B4AE42608A3E8009306E8 /* NiHonSyllabary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4AE32608A3E8009306E8 /* NiHonSyllabary.swift */; };
+		4D5B4B92260D6E03009306E8 /* HiHonWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4B91260D6E03009306E8 /* HiHonWord.swift */; };
 		4D674A84259B314A0063C1F0 /* NiHonGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D674A83259B314A0063C1F0 /* NiHonGoApp.swift */; };
 		4D674A86259B314A0063C1F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D674A85259B314A0063C1F0 /* ContentView.swift */; };
 		4D674A88259B314C0063C1F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D674A87259B314C0063C1F0 /* Assets.xcassets */; };
@@ -16,7 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D5B4AE32608A3E8009306E8 /* NihonWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihonWord.swift; sourceTree = "<group>"; };
+		4D5B4AE32608A3E8009306E8 /* NiHonSyllabary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiHonSyllabary.swift; sourceTree = "<group>"; };
+		4D5B4B91260D6E03009306E8 /* HiHonWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiHonWord.swift; sourceTree = "<group>"; };
 		4D674A80259B314A0063C1F0 /* NiHonGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiHonGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D674A83259B314A0063C1F0 /* NiHonGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiHonGoApp.swift; sourceTree = "<group>"; };
 		4D674A85259B314A0063C1F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				4D674A83259B314A0063C1F0 /* NiHonGoApp.swift */,
-				4D5B4AE32608A3E8009306E8 /* NihonWord.swift */,
+				4D5B4AE32608A3E8009306E8 /* NiHonSyllabary.swift */,
+				4D5B4B91260D6E03009306E8 /* HiHonWord.swift */,
 				4D674A85259B314A0063C1F0 /* ContentView.swift */,
 				4D7D4337259DA775008A2FF3 /* ListView.swift */,
 				4D674A87259B314C0063C1F0 /* Assets.xcassets */,
@@ -146,8 +149,9 @@
 			files = (
 				4D674A86259B314A0063C1F0 /* ContentView.swift in Sources */,
 				4D674A84259B314A0063C1F0 /* NiHonGoApp.swift in Sources */,
+				4D5B4B92260D6E03009306E8 /* HiHonWord.swift in Sources */,
 				4D7D4338259DA775008A2FF3 /* ListView.swift in Sources */,
-				4D5B4AE42608A3E8009306E8 /* NihonWord.swift in Sources */,
+				4D5B4AE42608A3E8009306E8 /* NiHonSyllabary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

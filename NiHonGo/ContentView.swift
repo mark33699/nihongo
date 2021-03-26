@@ -17,7 +17,7 @@ struct ContentView: View {
     init() {
         UINavigationBar.appearance().backgroundColor = .systemPink
         
-        for (index, word) in NihonWord.allCases.enumerated() {
+        for (index, word) in NiHonSyllabary.allCases.enumerated() {
             let idx = index+1
             print("\(idx).\(word.rawValue) = \(word.hiragana)_\(word.column)_\(word.row)")
             if idx % 5 == 0 {
@@ -35,7 +35,7 @@ struct ContentView: View {
         })
         
         VStack{
-            Text(NihonWord.allCases[index].hiragana.rawValue)
+            Text(NiHonSyllabary.allCases[index].hiragana.rawValue)
                 .frame(height: 100)
                 .font(.system(size: 100))
                 .background(Color.red)
@@ -43,7 +43,7 @@ struct ContentView: View {
             Spacer().frame(height: 100)
             
             Button(action: {
-                if index < NihonWord.allCases.count - 1 {
+                if index < NiHonSyllabary.allCases.count - 1 {
                     index += 1
                 }
             }, label: {
