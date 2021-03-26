@@ -8,7 +8,63 @@
 import Foundation
 
 struct HiHonWord {
-    enum partsOfSpeech { //日文的詞類叫做「品詞」
+    
+    let words: [NiHonSyllabary]
+    var hiraganas: [String] {
+        return words.map{ $0.hiragana.rawValue }
+    }
+    
+    let partsOfSpeech: PartsOfSpeech
+    var verbType: VerbType? {
+        guard partsOfSpeech == .verb else {
+            return nil
+        }
+        guard words.count == 0 else {
+            return nil
+        }
+        
+        //各種例外
+        switch words {
+        case [.su, .ru],
+             [.ku, .ru]:
+            return .typeIII
+            
+        case [.i, .ru],
+             [.si, .ru],
+             [.ki, .ru],
+             [.ti, .ru],
+             [.ha, .i, .ru],
+             [.ha, .si, .ru],
+//             [.ni, .gi, .ru],
+             
+             [.ke, .ru],
+             [.te, .ru],
+             [.he, .ru],
+             [.a, .se, .ru],
+             [.ka, .e, .ru],
+             [.su, .ke, .ru],
+             [.hu, .ke, .ru]
+//             [.su, .be, .ru],
+             :
+            return .typeI //一類假二類
+        default:
+            break
+        }
+        
+        if words.last?.column == .う段 {
+            return .typeI
+        } else if words.last == .ru {
+            //倒數第二個字是否為上下一段
+            let last2Col = words[words.count - 2].column
+            if last2Col == .い段 || last2Col == .え段 {
+                return .typeII
+            }
+        }
+        
+        return .typeUnknown
+    }
+    
+    enum PartsOfSpeech { //日文的詞類叫做「品詞」
         
         ///=======十大=======
         case noun //名詞 (めいし)
@@ -25,10 +81,9 @@ struct HiHonWord {
         case pronoun //代名詞
         
         /**
-         
          /*
          英文起初將形容動詞翻譯為Na-adjective（な形容詞），之後由於發現形容動詞與名詞有諸多相似性，故現在稱之為Adjectival noun（形容詞性名詞）
-         靠北形容動詞跟動詞沒關係
+         ...靠北形容動詞跟動詞沒關係
           */
          
          //日文的
@@ -41,5 +96,12 @@ struct HiHonWord {
          //conjunction(連接詞) -> and, but, or, so, because, when (連接兩個句子)
          //preposition(介系詞) -> in, on, at, of, for, with, from (連接兩個東西)
          */
+    }
+    
+    enum VerbType {
+        case typeI
+        case typeII
+        case typeIII
+        case typeUnknown
     }
 }
