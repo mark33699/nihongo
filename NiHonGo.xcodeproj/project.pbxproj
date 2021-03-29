@@ -13,6 +13,7 @@
 		4D5B4BAB26116DB1009306E8 /* GrammarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4BAA26116DB1009306E8 /* GrammarView.swift */; };
 		4D5B4BAE26116DC2009306E8 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4BAD26116DC2009306E8 /* QuizView.swift */; };
 		4D5B4BB4261170B3009306E8 /* NiHonGoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4BB3261170B3009306E8 /* NiHonGoView.swift */; };
+		4D5B4BB92611A180009306E8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4BB82611A17F009306E8 /* SearchBar.swift */; };
 		4D674A84259B314A0063C1F0 /* NiHonGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D674A83259B314A0063C1F0 /* NiHonGoApp.swift */; };
 		4D674A86259B314A0063C1F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D674A85259B314A0063C1F0 /* ContentView.swift */; };
 		4D674A88259B314C0063C1F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D674A87259B314C0063C1F0 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		4D5B4BAA26116DB1009306E8 /* GrammarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarView.swift; sourceTree = "<group>"; };
 		4D5B4BAD26116DC2009306E8 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		4D5B4BB3261170B3009306E8 /* NiHonGoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiHonGoView.swift; sourceTree = "<group>"; };
+		4D5B4BB82611A17F009306E8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4D674A80259B314A0063C1F0 /* NiHonGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiHonGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D674A83259B314A0063C1F0 /* NiHonGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiHonGoApp.swift; sourceTree = "<group>"; };
 		4D674A85259B314A0063C1F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4D5B4BB72611A158009306E8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				4D5B4BB82611A17F009306E8 /* SearchBar.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		4D674A77259B314A0063C1F0 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 				4D674A8C259B314C0063C1F0 /* Info.plist */,
 				4D5B4BA326116C63009306E8 /* Model */,
 				4D5B4BB126116DD9009306E8 /* View */,
+				4D5B4BB72611A158009306E8 /* Component */,
 				4D674A89259B314C0063C1F0 /* Preview Content */,
 			);
 			path = NiHonGo;
@@ -177,6 +188,7 @@
 				4D674A84259B314A0063C1F0 /* NiHonGoApp.swift in Sources */,
 				4D5B4B92260D6E03009306E8 /* HiHonWord.swift in Sources */,
 				4D5B4AE42608A3E8009306E8 /* NiHonSyllabary.swift in Sources */,
+				4D5B4BB92611A180009306E8 /* SearchBar.swift in Sources */,
 				4D5B4BAE26116DC2009306E8 /* QuizView.swift in Sources */,
 				4D5B4BAB26116DB1009306E8 /* GrammarView.swift in Sources */,
 				4D5B4BA726116D94009306E8 /* FiftyView.swift in Sources */,

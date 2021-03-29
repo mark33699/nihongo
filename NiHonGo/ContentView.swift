@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var index = 0
-    
     init() {
         
         for (index, word) in NiHonSyllabary.allCases.enumerated() {
@@ -23,14 +21,14 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TabView {
-            FiftyView()
-                .tabItem {
-                    Text("五十音")
-                    Image(systemName: "icloud")
-                }
+        TabView() {
+//            FiftyView()
+//                .tabItem {
+//                    Text("五十音")
+//                    Image(systemName: "icloud")
+//                }
             
-            GrammarView()
+            GrammarView(searchText: .constant(""))
                 .tabItem {
                     Text("文法機")
                     Image(systemName: "icloud")

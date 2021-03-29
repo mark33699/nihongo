@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct GrammarView: NiHonGoView {
-    
-    @State var title: String = ""
-    
-    init() {
-        title = "我是\(type(of: self))"
-    }
+    @Binding var searchText: String
     
     var body: some View {
-        //Text("我是\(type(of: self))") //報錯
-        //Text(title) //init會沒辦法賦值= =....
-        Text("GrammarView")
+        
+        NavigationView {
+            VStack {
+                SearchBar(text: $searchText).padding(8)
+                
+                List(NiHonSyllabary.allCases, id: \.self) { syllabary in
+                    Text(syllabary.hiragana.rawValue)
+                }.navigationBarTitle("請搜尋")
+            }.padding(-16)
+        }
     }
 }
 
 struct GrammarView_Previews: PreviewProvider {
     static var previews: some View {
-        GrammarView()
+        GrammarView(searchText: .constant(""))
     }
 }
