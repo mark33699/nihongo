@@ -28,19 +28,13 @@ struct ContentView: View {
     
     var body: some View {
         
-        let modalBtn = Button("modal") {
-            presentingModal = true
-        }.sheet(isPresented: $presentingModal, content: {
-            ListView()
-        })
-        
         VStack{
             Text(NiHonSyllabary.allCases[index].hiragana.rawValue)
                 .frame(height: 100)
                 .font(.system(size: 100))
                 .background(Color.red)
 
-            Spacer().frame(height: 100)
+            Spacer().frame(height: 20)
             
             Button(action: {
                 if index < NiHonSyllabary.allCases.count - 1 {
@@ -54,6 +48,20 @@ struct ContentView: View {
             .clipShape(Circle())
             
             Spacer().frame(height: 100)
+            
+            Button("modal") {
+                presentingModal = true
+            }.sheet(isPresented: $presentingModal, content: {
+                ListView()
+            })
+            
+            Spacer().frame(height: 20)
+            
+            Button("fullScreen") {
+                presentingFullScreen = true
+            }.fullScreenCover(isPresented: $presentingFullScreen, content: {
+                ListView()
+            })
         }
     }
 }
