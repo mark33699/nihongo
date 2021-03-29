@@ -10,12 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State var index = 0
-    @State var input = ""
-    @State var presentingModal = false
-    @State var presentingFullScreen = false //不拆兩個變數的話, 會變成都是modal
     
     init() {
-        UINavigationBar.appearance().backgroundColor = .systemPink
         
         for (index, word) in NiHonSyllabary.allCases.enumerated() {
             let idx = index+1
@@ -27,41 +23,24 @@ struct ContentView: View {
     }
     
     var body: some View {
-        
-        VStack{
-            Text(NiHonSyllabary.allCases[index].hiragana.rawValue)
-                .frame(height: 100)
-                .font(.system(size: 100))
-                .background(Color.red)
-
-            Spacer().frame(height: 20)
-            
-            Button(action: {
-                if index < NiHonSyllabary.allCases.count - 1 {
-                    index += 1
+        TabView {
+            FiftyView()
+                .tabItem {
+                    Text("五十音")
+                    Image(systemName: "icloud")
                 }
-            }, label: {
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-            })
-            .frame(width: 100, height: 100)
-            .clipShape(Circle())
             
-            Spacer().frame(height: 100)
+            GrammarView()
+                .tabItem {
+                    Text("文法機")
+                    Image(systemName: "icloud")
+                }
             
-            Button("modal") {
-                presentingModal = true
-            }.sheet(isPresented: $presentingModal, content: {
-                ListView()
-            })
-            
-            Spacer().frame(height: 20)
-            
-            Button("fullScreen") {
-                presentingFullScreen = true
-            }.fullScreenCover(isPresented: $presentingFullScreen, content: {
-                ListView()
-            })
+            QuizView()
+                .tabItem {
+                    Text("小測驗")
+                    Image(systemName: "icloud")
+                }
         }
     }
 }
