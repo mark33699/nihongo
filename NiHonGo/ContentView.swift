@@ -25,19 +25,19 @@ struct ContentView: View {
             FiftyView()
                 .tabItem {
                     Text("五十音")
-                    Image(systemName: "icloud")
+                    Image(systemName: "table")
                 }
             
             GrammarView(searchText: .constant(""))
                 .tabItem {
                     Text("文法機")
-                    Image(systemName: "icloud")
+                    Image(systemName: "personalhotspot")
                 }
             
             QuizView()
                 .tabItem {
                     Text("小測驗")
-                    Image(systemName: "icloud")
+                    Image(systemName: "square.and.pencil")
                 }
         }
     }
