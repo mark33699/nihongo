@@ -22,11 +22,11 @@ struct ContentView: View {
     
     var body: some View {
         TabView() {
-//            FiftyView()
-//                .tabItem {
-//                    Text("五十音")
-//                    Image(systemName: "icloud")
-//                }
+            FiftyView()
+                .tabItem {
+                    Text("五十音")
+                    Image(systemName: "icloud")
+                }
             
             GrammarView(searchText: .constant(""))
                 .tabItem {
