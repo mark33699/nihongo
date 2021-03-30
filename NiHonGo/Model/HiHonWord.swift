@@ -10,6 +10,10 @@ import Foundation
 struct HiHonWord {
     
     let words: [NiHonSyllabary]
+    let chinese: String
+    let english: String
+    let kanji: String
+        
     var hiraganas: [String] {
         return words.map{ $0.hiragana.rawValue }
     }
@@ -35,7 +39,7 @@ struct HiHonWord {
              [.ti, .ru],
              [.ha, .i, .ru],
              [.ha, .si, .ru],
-//             [.ni, .gi, .ru],
+             [.ni, .gi, .ru],
              
              [.ke, .ru],
              [.te, .ru],
@@ -43,10 +47,10 @@ struct HiHonWord {
              [.a, .se, .ru],
              [.ka, .e, .ru],
              [.su, .ke, .ru],
-             [.hu, .ke, .ru]
-//             [.su, .be, .ru],
-             :
+             [.hu, .ke, .ru],
+             [.su, .be, .ru]:
             return .typeI //一類假二類
+        
         default:
             break
         }

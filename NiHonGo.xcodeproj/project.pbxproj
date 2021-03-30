@@ -18,6 +18,7 @@
 		4D674A86259B314A0063C1F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D674A85259B314A0063C1F0 /* ContentView.swift */; };
 		4D674A88259B314C0063C1F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D674A87259B314C0063C1F0 /* Assets.xcassets */; };
 		4D674A8B259B314C0063C1F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D674A8A259B314C0063C1F0 /* Preview Assets.xcassets */; };
+		4DFE5FDF2611DDB70039B610 /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE5FDE2611DDB70039B610 /* WordData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4D674A87259B314C0063C1F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D674A8A259B314C0063C1F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D674A8C259B314C0063C1F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DFE5FDE2611DDB70039B610 /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			children = (
 				4D5B4AE32608A3E8009306E8 /* NiHonSyllabary.swift */,
 				4D5B4B91260D6E03009306E8 /* HiHonWord.swift */,
+				4DFE5FDE2611DDB70039B610 /* WordData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				4D674A86259B314A0063C1F0 /* ContentView.swift in Sources */,
 				4D5B4BB4261170B3009306E8 /* NiHonGoView.swift in Sources */,
 				4D674A84259B314A0063C1F0 /* NiHonGoApp.swift in Sources */,
+				4DFE5FDF2611DDB70039B610 /* WordData.swift in Sources */,
 				4D5B4B92260D6E03009306E8 /* HiHonWord.swift in Sources */,
 				4D5B4AE42608A3E8009306E8 /* NiHonSyllabary.swift in Sources */,
 				4D5B4BB92611A180009306E8 /* SearchBar.swift in Sources */,
