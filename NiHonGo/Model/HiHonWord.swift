@@ -7,15 +7,16 @@
 
 import Foundation
 
-struct HiHonWord {
+struct HiHonWord: Identifiable {
     
+    let id = UUID()
     let words: [NiHonSyllabary]
     let chinese: String
     let english: String
     let kanji: String
         
-    var hiraganas: [String] {
-        return words.map{ $0.hiragana.rawValue }
+    var hiraganas: String {
+        return words.reduce("", {$0 + $1.hiragana.rawValue})
     }
     
     let partsOfSpeech: PartsOfSpeech

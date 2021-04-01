@@ -13,13 +13,9 @@ struct GrammarView: NiHonGoView {
     var body: some View {
         
         NavigationView {
-            VStack {
-                SearchBar(text: $searchText).padding(8)
-                
-                List(NiHonSyllabary.allCases, id: \.self) { syllabary in
-                    Text(syllabary.hiragana.rawValue)
-                }.navigationBarTitle("請搜尋")
-            }.padding(-16)
+            List(verbs) { word in
+                Text(word.hiraganas)
+            }.navigationBarTitle("文法")
         }
     }
 }
