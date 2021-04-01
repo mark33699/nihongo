@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D5B4AE42608A3E8009306E8 /* NiHonSyllabary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4AE32608A3E8009306E8 /* NiHonSyllabary.swift */; };
-		4D5B4B92260D6E03009306E8 /* HiHonWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4B91260D6E03009306E8 /* HiHonWord.swift */; };
+		4D5B4B92260D6E03009306E8 /* NiHonWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4B91260D6E03009306E8 /* NiHonWord.swift */; };
 		4D5B4BA726116D94009306E8 /* FiftyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4BA626116D94009306E8 /* FiftyView.swift */; };
 		4D5B4BAB26116DB1009306E8 /* GrammarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4BAA26116DB1009306E8 /* GrammarView.swift */; };
 		4D5B4BAE26116DC2009306E8 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4BAD26116DC2009306E8 /* QuizView.swift */; };
@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4D5B4AE32608A3E8009306E8 /* NiHonSyllabary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiHonSyllabary.swift; sourceTree = "<group>"; };
-		4D5B4B91260D6E03009306E8 /* HiHonWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiHonWord.swift; sourceTree = "<group>"; };
+		4D5B4B91260D6E03009306E8 /* NiHonWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiHonWord.swift; sourceTree = "<group>"; };
 		4D5B4BA626116D94009306E8 /* FiftyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiftyView.swift; sourceTree = "<group>"; };
 		4D5B4BAA26116DB1009306E8 /* GrammarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarView.swift; sourceTree = "<group>"; };
 		4D5B4BAD26116DC2009306E8 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5B4AE32608A3E8009306E8 /* NiHonSyllabary.swift */,
-				4D5B4B91260D6E03009306E8 /* HiHonWord.swift */,
+				4D5B4B91260D6E03009306E8 /* NiHonWord.swift */,
 				4DFE5FDE2611DDB70039B610 /* WordData.swift */,
 			);
 			path = Model;
@@ -190,7 +190,7 @@
 				4D5B4BB4261170B3009306E8 /* NiHonGoView.swift in Sources */,
 				4D674A84259B314A0063C1F0 /* NiHonGoApp.swift in Sources */,
 				4DFE5FDF2611DDB70039B610 /* WordData.swift in Sources */,
-				4D5B4B92260D6E03009306E8 /* HiHonWord.swift in Sources */,
+				4D5B4B92260D6E03009306E8 /* NiHonWord.swift in Sources */,
 				4D5B4AE42608A3E8009306E8 /* NiHonSyllabary.swift in Sources */,
 				4D5B4BB92611A180009306E8 /* SearchBar.swift in Sources */,
 				4D5B4BAE26116DC2009306E8 /* QuizView.swift in Sources */,

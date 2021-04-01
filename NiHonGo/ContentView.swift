@@ -19,7 +19,7 @@ struct ContentView: View {
                     Image(systemName: "table")
                 }.tag(0)
             
-            GrammarView(searchText: .constant(""))
+            GrammarView()
                 .tabItem {
                     Text("文法機")
                     Image(systemName: "personalhotspot")

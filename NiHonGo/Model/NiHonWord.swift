@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HiHonWord: Identifiable {
+struct NiHonWord: Identifiable {
     
     let id = UUID()
     let words: [NiHonSyllabary]

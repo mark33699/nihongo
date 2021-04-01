@@ -11,7 +11,7 @@ import SwiftUI
 struct NiHonGoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(tabViewIndex: .constant(0))
+            ContentView(tabViewIndex: .constant(1))
         }
     }
 }
